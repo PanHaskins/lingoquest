@@ -1,0 +1,173 @@
+/* === Hero Section (Mobile First) === */
+.hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 4rem 0;
+	margin-bottom: 2rem;
+}
+
+.hero-content {
+	width: 100%;
+	max-width: 100%;
+	padding: 0 1rem;
+	margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+	margin-bottom: 1.5rem;
+}
+
+.hero-image {
+	display: none;
+}
+
+/* === Features Section (Mobile First) === */
+.features {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 3rem 0;
+	gap: 2rem;
+}
+
+.feature {
+	width: 100%;
+	max-width: 320px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.feature img {
+	width: 100%;
+	max-width: 250px;
+	max-height: 250px;
+	height: auto;
+	object-fit: cover;
+	border-radius: 15px;
+	margin: auto;
+}
+
+.feature h3 {
+	color: var(--primary);
+	margin-bottom: 0.5rem;
+	font-weight: 700;
+	font-size: 1.25rem;
+}
+
+.feature p {
+	max-width: 280px;
+	margin: 0 auto;
+	font-size: 0.9375rem;
+}
+
+/* === Media Queries === */
+/* Small devices (landscape phones, min-width: 576px) */
+@media (min-width: 576px) {
+	.hero {
+		padding: 7rem 0 2.5rem;
+	}
+	
+
+	.feature img {
+		width: 220px;
+		height: 220px;
+	}
+}
+
+/* Medium devices (tablets, min-width: 768px) */
+@media (min-width: 768px) {
+	.hero {
+		flex-direction: row;
+		text-align: left;
+		padding: 4rem 0;
+		gap: 2rem;
+		justify-content: center;
+	}
+	
+	.hero-content {
+		max-width: 45%;
+		padding: 0;
+		margin-bottom: 0;
+		flex: 1;
+	}
+	
+	.hero-image {
+		max-width: 45%;
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.hero-image img {
+		max-width: 100%;
+		height: auto;
+	}
+	
+	.features {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	
+	.feature {
+		flex: 0 1 calc(50% - 2rem);
+		max-width: calc(50% - 2rem);
+		margin: 0;
+	}
+}
+
+/* Large devices (desktops, min-width: 992px) */
+@media (min-width: 992px) {
+	.hero {
+		padding: 6rem 0;
+		justify-content: space-between;
+	}
+	
+	.hero-content {
+		max-width: 500px;
+	}
+	
+	.hero-image {
+		max-width: 40%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.features {
+		justify-content: space-between;
+	}
+	
+	.feature {
+		flex: 0 1 calc(33.333% - 2rem);
+		max-width: calc(33.333% - 2rem);
+	}
+}
+
+/* Extra large devices (large desktops, min-width: 1200px) */
+@media (min-width: 1200px) {
+	.hero-content {
+		max-width: 550px;
+	}
+	
+	.features {
+		margin: 4rem 0;
+	}
+}
+
+/* Extra extra large devices (4K and bigger, min-width: 2560px) */
+@media (min-width: 2560px) {
+	.hero {
+		padding: 8rem 0;
+	}
+	
+	.feature img {
+		width: 280px;
+		height: 280px;
+	}
+}

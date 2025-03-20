@@ -1,0 +1,13 @@
+User-agent: Googlebot
+Disallow: 
+User-agent: googlebot-image
+Disallow: 
+User-agent: googlebot-mobile
+Disallow: 
+User-agent: Slurp
+Disallow: 
+User-agent: *
+Disallow: 
+Disallow: /upload/
+Disallow: /profile/
+Sitemap: https://lingoquest.eu/sitemap.xml

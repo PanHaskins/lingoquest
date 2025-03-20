@@ -1,0 +1,276 @@
+/* Top Buttons */
+.top-buttons {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 1.5rem;
+}
+
+.top-buttons a,
+.top-buttons button {
+    background: var(--secondary);
+    border: 1px solid var(--primary);
+    border-radius: 0.75rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: var(--primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.top-buttons a:hover,
+.top-buttons button:hover {
+    background: var(--primary);
+    color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+.top-buttons button:hover i {
+    animation: rotate360 0.5s linear;
+}
+
+@keyframes rotate360 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Progress Container */
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.progress-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+}
+
+.progress-stats .correct {
+    color: var(--primary);
+    text-align: left;
+}
+
+.progress-stats .incorrect {
+    color: var(--error);
+    text-align: right;
+}
+
+.progress-stats .percentage {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+}
+
+.progress-correct {
+    height: 100%;
+    background-color: var(--primary);
+    transition: width 0.5s ease;
+}
+
+.progress-incorrect {
+    height: 100%;
+    background-color: var(--error);
+    transition: width 0.5s ease;
+}
+
+/* Game Container */
+.game-container {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Sentence Box */
+.sentence-box {
+    background-color: var(--secondary);
+    padding: 0.75rem 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--text);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: fit-content;
+    min-width: 200px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 1.5;
+}
+
+/* Drop Zone */
+.drop-zone {
+    display: inline-block;
+    min-width: 40px;
+    max-width: 150px;
+    text-align: center;
+    padding: 0.1rem 0.5rem;
+    border: 2px dashed #aaa;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+    line-height: 1.5;
+}
+
+.drop-zone.dragover {
+    border-color: var(--primary);
+    background-color: rgba(88, 204, 2, 0.1);
+}
+
+.drop-zone.correct {
+    background-color: #d4edda;
+    border-color: var(--primary);
+}
+
+.drop-zone.incorrect {
+    background-color: #f8d7da;
+    border-color: var(--error);
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Options Container */
+.options-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Option */
+.option {
+    background-color: #fff;
+    border: 1px solid var(--primary);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: move;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.option:hover {
+    transform: translateY(-2px);
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+/* Feedback */
+.feedback {
+    font-size: 1rem;
+    color: var(--error);
+    margin-top: 0.25rem;
+    min-height: 1.5rem;
+    display: block;
+}
+
+/* Hint */
+.hint {
+    font-size: 1rem;
+    color: #777;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .sentence-box {
+        padding: 0.5rem 1rem;
+        font-size: 1.5rem;
+        width: 100%;
+        overflow-x: visible;
+        white-space: normal;
+    }
+
+    .drop-zone {
+        min-width: 30px;
+        max-width: 120px;
+        padding: 0.1rem 0.4rem;
+    }
+
+    .option {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .progress-stats {
+        font-size: 1rem;
+    }
+
+    .progress-stats .percentage {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sentence-box {
+        font-size: 1.25rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .drop-zone {
+        min-width: 25px;
+        max-width: 100px;
+        padding: 0.1rem 0.3rem;
+    }
+
+    .option {
+        font-size: 0.875rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .feedback {
+        font-size: 0.875rem;
+    }
+
+    .hint {
+        font-size: 0.875rem;
+    }
+
+    .progress-stats {
+        font-size: 0.875rem;
+    }
+
+    .progress-stats .percentage {
+        font-size: 1rem;
+    }
+}

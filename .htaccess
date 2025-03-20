@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Exception for the uploads directory
+RewriteCond %{REQUEST_URI} ^/upload/ [NC]
+RewriteRule ^ - [L]
+
+# Redirect all requests to index.php if the file/folder does not exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]

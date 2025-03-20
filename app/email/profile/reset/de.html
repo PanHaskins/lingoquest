@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LingoQuest - {{title}}</title>
+</head>
+<body style="margin: 0; padding: 20px; background-color: #f5f5f5; font-family: Arial, Helvetica, sans-serif; line-height: 1.6; color: #3c3c3c;">
+    <table width="100%" cellspacing="0" cellpadding="0" style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 16px;">
+        <!-- Header -->
+        <tr>
+            <td style="background-color: #69D01B; color: #ffffff; text-align: center; padding: 32px 20px;">
+                <h1 style="margin: 0; font-size: 28px; font-weight: bold;">LingoQuest</h1>
+            </td>
+        </tr>
+        <!-- Content -->
+        <tr>
+            <td style="padding: 32px; color: #3c3c3c;">
+                <h2 style="font-size: 22px; margin: 0 0 16px 0; font-weight: bold;">Hallo {{username}}! 👋</h2>
+                <p style="margin: 16px 0; font-size: 16px;">Wir haben eine Anfrage zum Zurücksetzen des Passworts für dein LingoQuest-Konto erhalten. Wenn du diese Anfrage nicht gestellt hast, kannst du diese E-Mail ignorieren.</p>
+                <p style="margin: 16px 0; font-size: 16px;">Um ein neues Passwort festzulegen, klicke auf die Schaltfläche unten:</p>
+                <div style="text-align: center;">
+                    <a href="{{tokenLink}}" style="display: inline-block; padding: 14px 28px; background-color: #69D01B; color: #ffffff; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 16px; margin: 24px 0;">Mein Passwort zurücksetzen</a>
+                </div>
+                <p style="font-size: 14px; color: #666; margin: 16px 0;">Dieser Link läuft aus Sicherheitsgründen in 1 Stunde ab.</p>
+                <div style="height: 1px; background-color: #eee; margin: 24px 0;"></div>
+                <p style="font-size: 14px; color: #666; margin: 16px 0;">Wenn die Schaltfläche nicht funktioniert, klicke hier: <a href="{{tokenLink}}" style="color: #58cc02;">https://{{tokenLink}}</a></p>
+            </td>
+        </tr>
+        <!-- Footer -->
+        <tr>
+            <td style="text-align: center; padding: 24px; font-size: 14px; color: #666; background-color: #f8f8f8; border-top: 1px solid #eee;">
+                <p style="margin: 0 0 8px 0;">© 2025 LingoQuest. Alle Rechte vorbehalten.</p>
+                <p style="margin: 0;">Brauchen Sie Hilfe? Kontaktieren Sie uns unter <a href="mailto:support@lingoquest.eu" style="color: #58cc02; text-decoration: none; font-weight: bold;">support@lingoquest.eu</a></p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
