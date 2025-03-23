@@ -30,23 +30,23 @@ document.addEventListener('DOMContentLoaded', function() {
         if (input.name === 'username') {
             const usernameRegex = /^[a-zA-Z0-9_]+$/;
             isValid = usernameRegex.test(input.value);
-            message = isValid ? '' : translations.usernameInvalid;
+            message = isValid ? '' : translations.username_invalid;
         } else if (input.name === 'email') {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             isValid = emailRegex.test(input.value);
-            message = isValid ? '' : translations.emailInvalid;
+            message = isValid ? '' : translations.email_invalid;
         } else if (input.name === 'password' || input.name === 'new_password') {
             if (input.value.trim() === '') {
                 isValid = true;
             } else {
                 const passwordRegex = /^(?=.*\d)(?=.*[^a-zA-Z0-9]).{6,}$/;
                 isValid = passwordRegex.test(input.value);
-                message = isValid ? '' : translations.passwordInvalid;
+                message = isValid ? '' : translations.password_invalid;
             }
         } else if (input.name === 'confirm_password') {
             const password = input.closest('form').querySelector('input[name="password"]').value;
             isValid = input.value === password;
-            message = isValid ? '' : translations.passwordsMismatch;
+            message = isValid ? '' : translations.passwords_mismatch;
         }
 
         if (!isValid) {

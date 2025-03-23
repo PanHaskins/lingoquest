@@ -68,8 +68,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </div>
 <script>
     const translations = {
-        usernameInvalid: "<?php echo __('username_invalid'); ?>",
-        passwordInvalid: "<?php echo __('password_invalid'); ?>",
+        username_invalid: "<?php echo __('username_invalid'); ?>",
+        password_invalid: "<?php echo __('password_invalid'); ?>",
     };
 </script>
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
